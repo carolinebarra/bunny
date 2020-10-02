@@ -28,9 +28,7 @@ const StyledText = styled.div`
 
 const Cart = () => {
 	let { id } = useParams();
-	const { isCartOpen, closeCart, checkout, product, fetchProductWithId, removeLineItemInCart } = useContext(
-		ShopContext
-	);
+	const { isCartOpen, closeCart, checkout, fetchProductWithId, removeLineItemInCart } = useContext(ShopContext);
 	useEffect(() => {
 		fetchProductWithId(id);
 		return () => {};
